@@ -1,0 +1,59 @@
+
+Egisonの学び方
+
+Egisonは，Hackageから配布されている日本発のオリジナルプログラミング言語です．
+本記事ではこのプログラミング言語Egisonをこれから知りたいという方のためにどういう情報があるかまとめて紹介したいと思います．
+
+- まずはインストール
+
+Hackageを使って配布しているので，Haskellユーザの方なら，
+
+$ cabal update
+$ cabal install egison
+
+とシェルでコマンドを打つだけでインストールすることができます．
+Gitをインストールしているなら，
+
+$ git clone git@github.com:egisatoshi/egison2
+
+とすれば，ソースコードも手に入ります．
+
+- エディタの設定
+
+Egisonプログラムを書いたり読んだりするにはエディタのEgisonモードが飛鳥です．
+開発者が用意したEgison-modeと，@alpicolaさんが作ってくれたvim-modeがあります．
+
+https://github.com/alpicola/vim-egison
+
+- Egisonの初歩
+
+開発者が書いたEgisonマニュアルとEgisonコミュニティによって書かれたマニュアルの2種類があります．
+Egisonコミュニティによって書かれたマニュアルが最初はわかりやすいでしょう．
+
+https://github.com/egisatoshi/egison2/wiki/Egison%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB
+
+正直わかりにくいですが，いちおう開発者自身が書いた英語のマニュアルもあります．
+
+http://egison.pira.jp/manual/index.html
+
+これらのマニュアルをある程度目を通したら，Egisonのソースコードに含まれているライブラリを読んでみるのがいいでしょう．
+
+- Egisonにはまったら
+
+Egisonは革新的なオリジナルの機能をもつプログラミング言語です．
+まずEgison公式TwitterアカウントをFollowして，Egisonの最新情報を常に得られるようにしましょう．
+
+@Egison_Lang
+
+- Egisonで仕事をする
+
+開発者が務めている株式会社MurakumoではEgison開発が行われています．
+現在は型推論を実装してコンパイル時に型チェックなどを行なってくれるEgison Version3を開発中です．
+
+* 型システムの実装
+* もっと一般向けのシンタックスの設計
+* LLVMに変換するコンパイラの作成
+* GPUまでを使った超分散パターンマッチングの実装
+
+その他にも社外秘のEgison関係プロジェクトがいくつかあり進行中のものがあります．
+興味がある方，持って下さった方はぜひ連絡してください．
