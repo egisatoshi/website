@@ -2,6 +2,7 @@
 <head>
 <title>Egisonの学び方</title>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../style.css">
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -18,74 +19,111 @@
 </head>
 
 <body>
-<pre>
-Egisonの学び方
+<h1>Egisonの学び方</h1>
 
-
+<p>
 Egisonは，Hackageから配布されている日本発のオリジナルプログラミング言語です．
 本記事ではこのプログラミング言語Egisonをこれから知りたいという方のためにどういう情報があるかまとめて紹介したいと思います．
+</p>
 
-- まずはインストール
+<h2>まずはインストール</h2>
 
+<p>
 Hackageを使って配布しているので，Haskellユーザの方なら，
+</p>
 
+<code>
 $ cabal update
 $ cabal install egison
+</code>
 
+<p>
 とシェルでコマンドを打つだけでインストールすることができます．
 Gitをインストールしているなら，
+</p>
 
+<code>
 $ git clone git@github.com:egisatoshi/egison2
+</code>
 
+<p>
 とすれば，ソースコードも手に入ります．
+</p>
 
-- エディタの設定
+<h2>エディタの設定</h2>
 
+<p>
 Egisonプログラムを書いたり読んだりするにはエディタのEgisonモードが必要です．
 開発者が用意したEgison-modeと，@alpicolaさんが作ってくれたvim-modeがあります．
+</p>
 
-https://github.com/alpicola/vim-egison
+<ul>
+  <li><a href="https://github.com/alpicola/vim-egison">https://github.com/alpicola/vim-egison</a></li>
+</ul>
 
-- Egisonの初歩
+<h2>Egisonの初歩</h2>
 
+<p>
 開発者が書いたEgisonマニュアルとEgisonコミュニティによって書かれたマニュアルの2種類があります．
 Egisonコミュニティによって書かれたマニュアルが最初はわかりやすいでしょう．
+</p>
 
-https://github.com/egisatoshi/egison2/wiki/Egison%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB
+<ul>
+  <li><a href="https://github.com/egisatoshi/egison2/wiki/Egison%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB">https://github.com/egisatoshi/egison2/wiki/Egison%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB</a></li>
+</ul>
 
+<p>
 正直わかりにくいですが，いちおう開発者自身が書いた英語のマニュアルもあります．
+</p>
 
-http://egison.pira.jp/manual/index.html
+<ul>
+  <li>http://egison.pira.jp/manual/index.html</li>
+</ul>
 
+<p>
 これらのマニュアルをある程度目を通したら，Egisonのソースコードに含まれているライブラリを読んでみるのがいいでしょう．
+</p>
 
-- EgisonとHaskell
+<h2>EgisonとHaskell</h2>
 
+<p>
 egison-quoteを使うとEgison式 をHaskellから使うとことができます．
+</p>
 
-https://github.com/xenophobia/Egison-Quote 
+<ul>
+  <li>https://github.com/xenophobia/Egison-Quote</li>
+</ul>
 
-- Egisonにはまったら
+<h2>Egisonにはまったら</h2>
 
+<p>
 Egisonは革新的なオリジナルの機能をもつプログラミング言語です．
 まずEgison公式TwitterアカウントをFollowして，Egisonの最新情報を常に得られるようにしましょう．
+</p>
 
+<p>
 @Egison_Lang
+</p>
 
-- Egisonで仕事をする
+<h2>Egisonで仕事をする</h2>
 
+<p>
 開発者が務めている株式会社MurakumoではEgison開発が行われています．
 現在は型推論を実装してコンパイル時に型チェックなどを行なってくれるEgison Version3を開発中です．
+</p>
 
-* 型システムの実装
-* もっと一般向けのシンタックスの設計
-* LLVMに変換するコンパイラの作成
-* GPUまでを使った超分散パターンマッチングの実装
+<ul>
+  <li>型システムの実装</li>
+  <li>もっと一般向けのシンタックスの設計</li>
+  <li>LLVMに変換するコンパイラの作成</li>
+  <li>GPUまでを使った超分散パターンマッチングの実装</li>
+</ul>
 
+<p>
 その他にも社外秘のEgison関係プロジェクトがいくつかあり進行中のものがあります．
 興味がある方，持って下さった方は@Egison_Lang, もしくは@__Egiまでぜひ連絡してください．
+</p>
 
-</pre>
 <hr/>
 <p>
   [<a href="../index-j.html#essays">Top</a>]
