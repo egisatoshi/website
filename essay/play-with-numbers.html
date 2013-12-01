@@ -1,0 +1,160 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Egisonで整数論</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../style.css">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9772679-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<h1>Egisonで整数論</h1>
+
+<p>
+  Egison Advent Calendar 1日目の記事です。
+  Egisonで整数を使って遊んでみます。
+</p>
+
+<h2>無限自然数列nats</h2>
+
+<p>
+  EgisonはHaskellなどのように純粋関数型言語でもあるので無限列を素直に扱うことができます。
+  以下のように、take関数を使って先頭いくつかの要素を無限列から取り出します。
+</p>
+
+<pre>
+<code>
+&gt; (take 10 nats)
+{1 2 3 4 5 6 7 8 9 10}
+</code>
+</pre>
+
+<h2>ピタゴラス数</h2>
+
+<p>
+  ピタゴラス数をパターンマッチで取り出します。
+</p>
+
+<pre>
+<code>
+&gt; (take 10 (match-all nats (list integer)
+   [&lt;join _ &lt;cons $x
+     &lt;join _ &lt;cons $y
+      &lt;join _ &lt;cons (& ?(lambda [$z] (eq? (* z z) (+ (* x x) (* y y)))) $z)
+       _&gt;&gt;&gt;&gt;&gt;&gt;
+    [x y z]]))
+{[3 4 5] [6 8 10] [5 12 13] [9 12 15] [8 15 17] [12 16 20] [7 24 25] [15 20 25] [10 24 26] [20 21 29]}
+</code>
+</pre>
+
+<h2>無限素数列primes</h2>
+
+<p>
+  これからは以下の様な素数列で遊んでみます。
+</p>
+
+<pre>
+<code>
+&gt; (take 10 primes)
+{2 3 5 7 11 13 17 19 23 29}
+</code>
+</pre>
+
+<h2>双子素数、三つ子素数</h2>
+
+<p>
+  双子素数をパターンマッチで取り出します。
+</p>
+
+<pre>
+<code>
+&gt; (take 10 (match-all primes (list integer)
+   [&lt;join _ &lt;cons $n &lt;cons ,(+ n 2) _&gt;&gt;&gt; [n (+ n 2)]]))
+{[3 5] [5 7] [11 13] [17 19] [29 31] [41 43] [59 61] [71 73] [101 103] [107 109]}
+</code>
+</pre>
+
+<p>
+  三つ子素数をパターンマッチで取り出します。
+</p>
+
+<pre>
+<code>
+&gt; (take 5 (match-all primes (list integer)
+   [&lt;join _ &lt;cons $n &lt;cons ,(+ n 2) &lt;cons ,(+ n 6) _&gt;&gt;&gt;&gt; [n (+ n 2) (+ n 6)]]))
+{[5 7 11] [11 13 17] [17 19 23] [41 43 47] [101 103 107]}
+&gt; (take 5 (match-all primes (list integer)
+   [&lt;join _ &lt;cons $n &lt;cons ,(+ n 4) &lt;cons ,(+ n 6) _&gt;&gt;&gt;&gt; [n (+ n 2) (+ n 6)]]))
+{[7 9 13] [13 15 19] [37 39 43] [67 69 73] [97 99 103]}
+</code>
+</pre>
+
+<h2>素数砂漠</h2>
+
+<p>
+  素数砂漠とは素数でない連続した自然数の列のことを言います。
+  パターンマッチでそれを取り出してみます。
+  以下のパターンマッチで50以上の連続で素数が現れない自然数の列を取得しています。
+</p>
+
+<pre>
+<code>
+&gt; (take 5 (match-all primes (list integer)
+    [&lt;join _
+      &lt;cons $m
+       &lt;cons (& ?(gte-i? $ (+ 50 m)) $n)
+        _&gt;&gt;&gt;
+     [m n]]))
+{[19609 19661] [25471 25523] [31397 31469] [31907 31957] [34061 34123]}
+</code>
+</pre>
+
+<h2>まとめ</h2>
+
+<p>
+  全探索を行うようなプログラムはEgisonのパターンマッチを使ってシンプルに記述することができます。<br/>
+  全探索を一部に含むアルゴリズムは多いので、Egisonのパターンマッチはそのような全探索をアルゴリズムの本質の部分の記述から切り離すのに大いに役立つはずです。<br/>
+  上に挙げたような例以外にも面白い例があれば<a href="http://www.egison.org/~egi/">私</a>まで是非メール下さい。<br/>
+  Twitter上で<a href="https://twitter.com/__Egi">@__Egi</a>か<a href="https://twitter.com/Egison_Lang">@Egison_Lang</a>に話しかけてくださるのも歓迎しています。
+</p>
+
+<h2>次の題材</h2>
+
+<p>
+  次はEgisonである程度大規模なグラフのパターンマッチをして遊んでみたいと思います。
+  現在そのための機能を開発中です。
+  月末までに完成させてデモする予定です。
+  どうぞご期待ください。
+</p>
+
+<hr/>
+
+<p>
+  [<a href="../index-j.html#essays">Top</a>] [<a href="./how-to-learn-egison.html">Previous essay</a>]
+</p>
+
+</body>
+
+<footer>
+  <table width=100% border=0 cellspacing=0>
+    <tr>
+      <td align=left>
+        <i>
+          Copyright (C) 2010-2013 <a href="http://egison.org/~egi/index-j.html">Satoshi Egi</a>
+        </i>
+    </tr>
+  </table>
+</footer>
+
+</html>
