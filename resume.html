@@ -14,8 +14,7 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
 <body>
 <div class="name-section">
 <h1>Satoshi Egi</h1>
-<p>5-43-3 Kameido Koto-ku Tokyo Japan<br>
-mobile: +81-90-8240-2444<br>
+<p>6-1-1115 Ojima Koto-ku Tokyo Japan<br>
 email: egi@egison.org<br>
 site: http://www.egison.org/~egi/<br>
 github: https://github.com/egisatoshi/<br></p>
@@ -23,11 +22,15 @@ github: https://github.com/egisatoshi/<br></p>
 
 <h2>Interests</h2>
 
-<p>Design of Programming Languages, Functional Programming, Web Application</p>
+<p>Design of Programming Languages, Functional Programming, Algorithms, Web Application</p>
 
 <h2>Work Experience</h2>
+
+<h3>Researcher, Rakuten Institute of Technology, November 2013 -</h3>
+<p><strong>Egison</strong> - The world's first programming language that realized non-linear pattern-matching with backtracking.</p>
+
 <h3>Engineer, Murakumo Corp, October 2012 - June 2013</h3>
-<p><strong>Egison3</strong> - Developed an interpreter of the programming language Egison version 3, leading a group of 6 engineers. The interpreter is written in Haskell.</p>
+<p><strong>Egison</strong> - Developed an interpreter of the Egison programming language version 3, leading a group of 6 engineers. The interpreter is written in Haskell.</p>
 
 <p><strong>Web application framework in Erlang</strong> - Developed a web application framework in Erlang.</p>
 
@@ -55,81 +58,32 @@ Masami Hagiya Lab.</p>
 
 <h2>Activities</h2>
 
-<h3>Programming Language Egison</h3>
+<h3>The Egison Programming Language</h3>
 <p><u>http://www.egison.org</u><br></p>
 
 <p>
   I have designed and implemented programming language Egison.
-  Egison is the <b>world first</b> programming language that has strong expressive power of pattern-matching with <i>unfree data types</i>, such as sets and multisets, whose data have no canonical form.
+  Egison is the world's first programming language that realized non-linear pattern-matching with backtracking.
+  We can directly represent pattern-matching against lists, multisets, sets, trees, graphs and any kind of data types.
 </p>
 
 <p>
-  In pattern-matching of well-known programming languages, the existence of canonical forms is assumed.
-  Therefore, when we do pattern-matching with unfree data types, we need to translate and regard them as data which have a canonical form.
-  For example, a set would be treated as a list.
-  Many programmers think this is unavoidable, and in fact, it is a latent stress of programming.
-  Sets and multisets often play important roles in expressing algorithms.
-  So natural expression for handling these kinds of data is also important.
+  Egison proposes a new paradigm <strong>pattern-matching-oriented</strong>.
+  The combination of <strong>all of the following features</strong> enables intuitive powerful pattern-matching.
 </p>
-
-<p>
-  Egison is the world's first programming language that makes pattern-matching with unfree data types practical.
-  Following features enables pattern-matching with unfree data types.
-</p>
-
-<dl>
-  <dt>Multiple pattern-matching results</dt>
-  <dd>
-    Pattern-matching has multiple results.
-    This feature is necessary to pattern-match with unfree data types.
-    Because unfree data have many forms for same data, so there are multiple ways of destruction.
-  </dd>
-  
-  <dt>Non-linear patterns</dt>
-  <dd>
-    Bindings in a pattern can be refer in the same pattern.
-    It is necessary to write useful patterns for pattern-matching with multiple results.
-  </dd>
-  
-  <dt>Patterns have lexical scoping</dt>
-  <dd>
-    We can modularize useful patterns with <i>pattern-function</i>, functions that receive patterns and return a pattern.
-    Since a pattern-function has lexical scoping, bindings for pattern-variables in the argument patterns and the body of pattern-functions don't conflict.
-    Useful patterns can be reused in many places in a program without worry of name clash.
-  </dd>
-</dl>
-
-<p>
-  There are other projects following Egison.
-</p>
-
-<p>
-  <a href="https://github.com/xenophobia/Egison-Quote">Egison-Quote</a> is one of those.
-  This project is started by a participant of Egison Workshop really attracted by Egison.
-  Egison-Quote enable to use Egison expression in Haskell programs.
-</p>
-
-<p>
-  <a href="https://github.com/alpicola/vim-egison">vim-egison</a> is another one of those.
-  The developer of vim-egison has joined Egison team after she developed it.
-  Vim-egison helps us to write Egison programs with vim.
-</p>
+<ul>
+  <li>Modularization of the way of pattern-matching</li>
+  <li>Pattern-matching with backtracking</li>
+  <li>Non-linear patterns with lexical scoping</li>
+</ul>
 
 <p>
   Egison is implemented in Haskell and distributed as a hackage package.
   Egison is getting popular and attracting a lot of people.
-  Now, Egison developing team has 10 members.
 </p>
   
 <p>
-  Here is the manual of Egison version 3.
-  <ul>
-    <li><a href="http://www.egison.org/manual3/">Egison Manual</a></li>
-  </ul>
-</p>
-
-<p>
-  The source code is available on <a href="https://github.com/egisatoshi/egsh">github page</a>.
+  The source code is available on <a href="https://github.com/egison/egison">GitHub</a>.
 </p>
 
 <h3>Scheme Compiler</h3>
@@ -141,31 +95,29 @@ Masami Hagiya Lab.</p>
   A byte code generated by the assembler can be executed by the simulator.
   I wrote the compiler and assembler with Scheme.
   Simulator is written in C for speed.
-  The source code is available on <a href="https://github.com/egisatoshi/scheme-compiler">github page</a>.
+  The source code is available on <a href="https://github.com/egisatoshi/scheme-compiler">GitHub</a>.
 </p>
 
 <h3>Gohantabeyo.com</h3>
 <p><u>http://gohantabeyo.com</u><br>
-  I am the second administrator of <a href="http://gohantabeyo.com">gohantabeyo.com</a> web site.
-  This site has around 85,000 active users now.
+  I am the second administrator of <a href="http://gohantabeyo.com">gohantabeyo.com</a> website.
   We can find someone who want to have lunch with each other using this site.
   This site is a twitter application build using Ruby on Rails.
 </p>
 
 <h3>Tomotomotter</h3>
-<p><u>https://github.com/egisatoshi/tomotomotter</u><br>
+<p>
   Tomotomotter is a kinds of bottle mail application based on twitter.
   With this application, we can exchange letters with our friends of friends, without knowing who they are each other.
   We regard two people have friendships if they are following each other.
   We can increase our friends with this application.
   This site is now closed.
-  The source code is available on <a href="https://github.com/egisatoshi/tomotomotter">github page</a>.
 </p>
 
 <h3>egsh</h3>
 <p><u>https://github.com/egisatoshi/egsh</u><br>
   I have an experience writing a simple shell which run on UNIX in C.
-  The source code is available on <a href="https://github.com/egisatoshi/egsh">github page</a>.
+  The source code is available on <a href="https://github.com/egisatoshi/egsh">GitHub</a>.
 </p>
 
 <h3>Simple HTTP Server</h3>
