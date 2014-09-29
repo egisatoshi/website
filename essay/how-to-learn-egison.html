@@ -7,15 +7,19 @@
 <body>
 <h1>Egisonの学び方</h1>
 
+<p style="color:#999;margin-left:10px;">
+  情報をアップデートするため、2014年9月22日に加筆・修正しました。
+</p>
+
 <p>
-Egisonは，Hackageから配布されている日本発のオリジナルプログラミング言語です．
-本記事ではこのプログラミング言語Egisonをこれから知りたいという方のためにどういう情報があるかまとめて紹介したいと思います．
+Egisonは、Hackageから配布されている日本発のオリジナルプログラミング言語です。
+本記事ではこのプログラミング言語Egisonをこれから知りたいという方のためにどういう情報があるかまとめて紹介したいと思います。
 </p>
 
 <h2>まずはインストール</h2>
 
 <p>
-Hackageを使って配布しているので，Haskellユーザの方なら，
+Hackageを使って配布しているので、Haskellユーザの方なら、
 </p>
 
 <code>
@@ -24,56 +28,70 @@ $ cabal install egison
 </code>
 
 <p>
-とシェルでコマンドを打つだけでインストールすることができます．
-Gitをインストールしているなら，
+とシェルでコマンドを打つだけでインストールすることができます。
+Gitをインストールしているなら、
 </p>
 
 <code>
-$ git clone git@github.com:egisatoshi/egison2
+$ git clone git@github.com:egison/egison.git
 </code>
 
 <p>
-とすれば，ソースコードも手に入ります．
+とすれば、ソースコードも手に入ります。
 </p>
 
 <h2>エディタの設定</h2>
 
 <p>
-Egisonプログラムを書いたり読んだりするにはエディタのEgisonモードが必要です．
-開発者が用意したEgison-modeと，@alpicolaさんが作ってくれたvim-modeがあります．
+Egisonプログラムを書いたり読んだりするにはエディタのEgisonモードがあると便利です。
+開発者が用意しているEmacsの<a target="_blank" href="https://github.com/egison/egison/blob/master/elisp/egison-mode.el">egison-mode.el</a>と、<a target="_blank" href="https://github.com/alpicola">@alpicola</a>さんが作ってくれた<a target="_blank" href="https://github.com/alpicola/vim-egison">vim-mode</a> (最新版Egisonには非対応) があります。
 </p>
 
 <ul>
-  <li><a href="https://github.com/alpicola/vim-egison">https://github.com/alpicola/vim-egison</a></li>
+  <li><a target="_blank" href="https://github.com/egison/egison/blob/master/elisp/egison-mode.el">egison-mode.el</a></li>
+  <li><a target="_blank" href="https://github.com/alpicola/vim-egison">vim-mode</a> (最新版Egisonには非対応)</li>
 </ul>
+
+
 
 <h2>Egisonの初歩</h2>
 
 <p>
-開発者が書いたEgisonマニュアルとEgisonコミュニティによって書かれたマニュアルの2種類があります．
-Egisonコミュニティによって書かれたマニュアルが最初はわかりやすいでしょう．
+  <a target="_blank" href="http://www.egison.org">Egisonの公式Webサイト</a>をはじめ、現在はたくさんのドキュメントがEgisonについてあります。
+</p>
+
+<p>
+  Egisonのコンセプトという5分でEgisonとはどういう言語か伝えるためのページを作っています。
 </p>
 
 <ul>
-  <li><a href="https://github.com/egisatoshi/egison2/wiki/Egison%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB">https://github.com/egisatoshi/egison2/wiki/Egison%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB</a></li>
+  <li><a target="_blank" href="http://www.egison.org/concept.html">Concept of Egison</a></li>
 </ul>
 
 <p>
-正直わかりにくいですが，いちおう開発者自身が書いた英語のマニュアルもあります．
+  Egisonの言語全体の仕様を素早く掴めるようにEgisonのCheat Sheetというのも作っています。
 </p>
 
 <ul>
-  <li>http://egison.pira.jp/manual/index.html</li>
+  <li><a target="_blank" href="http://www.egison.org/cheatsheet.html">Egison Cheat Sheet</a></li>
 </ul>
 
 <p>
-これらのマニュアルをある程度目を通したら，Egisonのソースコードに含まれているライブラリを読んでみるのがいいでしょう．
+  Egison Manualというのもあります。
+</p>
+
+<ul>
+  <li><a target="_blank" href="http://www.egison.org/manual/">Egison Manual</a></li>
+</ul>
+
+<p>
+これらのマニュアルをある程度目を通したら、Egisonのソースコードに含まれているライブラリを読んでみるのがいいでしょう。
 </p>
 
 <h2>EgisonとHaskell</h2>
 
 <p>
-egison-quoteを使うとEgison式 をHaskellから使うとことができます．
+egison-quoteを使うとEgison式 をHaskellから使うとことができます。
 </p>
 
 <ul>
@@ -83,32 +101,13 @@ egison-quoteを使うとEgison式 をHaskellから使うとことができます
 <h2>Egisonにはまったら</h2>
 
 <p>
-Egisonは革新的なオリジナルの機能をもつプログラミング言語です．
-まずEgison公式TwitterアカウントをFollowして，Egisonの最新情報を常に得られるようにしましょう．
-</p>
-
-<p>
-@Egison_Lang
-</p>
-
-<h2>Egisonで仕事をする</h2>
-
-<p>
-開発者が務めている株式会社MurakumoではEgison開発が行われています．
-現在は型推論を実装してコンパイル時に型チェックなどを行なってくれるEgison Version3を開発中です．
+Egisonは革新的なオリジナルの機能をもつプログラミング言語です。
+まずEgison公式TwitterアカウントをFollowして、Egisonの最新情報を常に得られるようにしましょう。
 </p>
 
 <ul>
-  <li>型システムの実装</li>
-  <li>もっと一般向けのシンタックスの設計</li>
-  <li>LLVMに変換するコンパイラの作成</li>
-  <li>GPUまでを使った超分散パターンマッチングの実装</li>
+  <li><a target="_blank" href="https://twitter.com/Egison_Lang">@Egison_Lang</a></li>
 </ul>
-
-<p>
-その他にも社外秘のEgison関係プロジェクトがいくつかあり進行中のものがあります．
-興味がある方，持って下さった方は@Egison_Lang, もしくは@__Egiまでぜひ連絡してください．
-</p>
 
 <hr/>
 <p>
