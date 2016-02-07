@@ -20,14 +20,68 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
   GitHub: https://github.com/egisatoshi/<br></p>
 </div>
 
+<h2>Summary</h2>
+
+<p>
+  I have an interest in mathematical formalization and its implementation on computers.
+</p>
+
+<p>
+  My motivation of research has been formalization of reasoning.<br/>
+  That is, my aim is to propose a mathematical definition of reasoning and implement it.<br/>
+  Thinking so, I majored computer science and learned especially mathematical logic and programming in the university.
+</p>
+  
+<p>
+  In that process, I got interest in the design and implementation of programming languages.<br/>
+  Pursuit of direct representation of computer programs suited me very much.<br/>
+  Then, I got an idea of the mechanism to strengthen the expressive power of pattern-matching expressions and implemented it in my new programming language Egison.<br/>
+  For detail on Egison, please see <a href="http://www.egison.org">the website</a> and <a href="http://www.egison.org/blog/RTC2015.html">my latest presentation</a>.
+</p>
+
+<p>
+  Recently, I have interest in importing ideas of mathematics behind machine learning technology into programming languages.<br/>
+  There are still several notations and modularization that are possible on papers but impossible on computer programs.<br/>
+  My research purpose is to fill these gaps and accelerate the research and development of machine learning technology and whole computer science.
+</p>
+
 <h2>Interests</h2>
 
-<p>Design of Programming Languages, Functional Programming, Algorithms, Web Application</p>
+<p>Functional Programming, Computer Algebra System, Automated Reasoning</p>
 
 <h2>Work Experience</h2>
 
-<h3>Associated Researcher, Rakuten Institute of Technology, November 2013 -</h3>
-<p><strong>Egison</strong> - The world's first programming language that realized non-linear pattern-matching with backtracking.</p>
+<h3>Scientist, Rakuten Institute of Technology, November 2013 -</h3>
+<p><strong>LeoFS</strong> - Worked as a member of the project.</p>
+<ul>
+  <li>Introduced <code>dialyzer</code>, a static type analyzing tool for Erlang to accelerate the implementation process and fixed several bugs.</li>
+  <li>Introduced <code>erldocs</code>, an automatic documentation generalization tool for Erlang.</li>
+</ul>
+<p><strong>Astra</strong> - Worked as a member of the project.</p>
+<ul>
+  <li>Implemented a re-entrant SQL parser in C that can be called from Erlang as NIF functions.</li>
+  <li>Read a part of source code of the existing data analysis software. (Pig, Hive, Spark)</li>
+  <li>Surveyed the existing machine learning libraries and their mechanism. (TensorFlow, Chainer)</li>
+</ul>
+<p><strong>Data mining</strong> - Worked for several data mining and text processing tasks.</p>
+<ul>
+  <li>Transliteration - Generated English-Katakana dictionaries from item's titles in Rakuten Ichiba.</li>
+  <ul>
+    <li>Implemented an Egison program to extract the pairs of an alphabet and katakana word whose pronunciation is similar.</li>
+    <li>List up shops in Rakuten who have a list of these pairs.</li>
+  </ul>
+  <li>Address normalization - Implemented an Egison program to normalize address to detect an address in the black list. (e.g. "四丁目12ー3" -> "4-12-3", "四◯三" -> "403")</li>
+  <li>
+    Counter suffix enumeration - Enumerate counter suffixes applying the regular expression "[0-9].(セット|入り|組)" to item's titles in Rakuten Ichiba.
+    (e.g. "壮" - お灸1000壮入り, "客" - 湯呑み5客セット, "幅" - 掛け軸3幅セット)
+  </li>
+</ul>
+<p><strong>Egison</strong> - Developing a language as a creator.</p>
+<ul>
+  <li>Improved the performance and enabled it to handle large files whose size is more than 2-3GB.</li>
+  <li>Made a good-looking website and an online-interpreter and online-tutorial.</li>
+  <li>(Planning to) Implement symbolic algebra system programmable utilizing Egison pattern-matching.</li>
+</ul>
 
 <h3>Engineer, Murakumo Corp, October 2012 - June 2013</h3>
 <p><strong>Egison</strong> - Developed an interpreter of the Egison programming language version 3, leading a group of 6 engineers. The interpreter is written in Haskell.</p>
@@ -37,33 +91,25 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
 <p><strong>Web applications in Erlang</strong> - Developed a web application in Erlang.</p>
 
 <h2>Education</h2>
-<h3>MS Computer Science, University of Tokyo, Tokyo Japan 2012</h3>
+<h3>MS Computer Science, The University of Tokyo, Tokyo Japan 2012</h3>
 <p>Concentration: Functional Programming<br>
 Masami Hagiya Lab.</p>
 <p>Projects:<br>
   I studied on intuitive expression of algorithms.
   As a result, I have designed and implemented the programming language Egison, whose feature is strong pattern-matching facility.
-  I will introduce Egison detail in Activity section below.
-<h3>BS Information Science, University of Tokyo, Tokyo Japan 2010</h3>
+<h3>BS Information Science, The University of Tokyo, Tokyo Japan 2010</h3>
 
-<p>Concentration: Functional Programming, Logics<br>
+<p>Concentration: Functional Programming, Mathematical Logic<br>
 Masami Hagiya Lab.</p>
-
-<h2>Honors / Achievements</h2>
-<h3>Selected the Exploratory IT Human Resources Project, IPA, December 2011</h3>
-<p><u>http://www.ipa.go.jp/jinzai/mitou/2011/2011_1/gaiyou/h-2.html</u><br>
-<h3>Certified as a Super Creator, IPA, October 2012</h3>
-<p><u>http://www.ipa.go.jp/files/000009163.pdf</u><br>
-</p>
 
 <h2>Activities</h2>
 
-<h3>The Egison Programming Language</h3>
-<p><u>http://www.egison.org</u><br></p>
+<h3>The Egison Programming Language (Ongoing)</h3>
+<p><u><a href="http://www.egison.org">http://www.egison.org</a></u><br></p>
 
 <p>
   I have designed and implemented programming language Egison.
-  Egison is the world's first programming language that realized non-linear pattern-matching with backtracking.
+  Egison is a programming language whose feature is non-linear pattern-matching with backtracking.
   We can directly represent pattern-matching against lists, multisets, sets, trees, graphs and any kind of data types.
 </p>
 
@@ -86,8 +132,31 @@ Masami Hagiya Lab.</p>
   The source code is available on <a href="https://github.com/egison/egison">GitHub</a>.
 </p>
 
-<h3>Scheme Compiler</h3>
-<p><u>https://github.com/egisatoshi/scheme-compiler</u><br>
+<p>
+  My latest presentation on Egison at Rakuten Technology Conference 2015 is <a href="http://www.egison.org/blog/RTC2015.html">here</a>.
+</p>
+
+<h3>Math Notebook (Ongoing)</h3>
+
+<p>
+  Not only software development, I also have interest in mathematics.<br/>
+  I have summarized the contents of some of these theories.
+</p>
+
+<p>
+  <li><a href="http://www.egison.org/~egi/etc/godel.html">Gödel's incompleteness theorems</a></li>
+  <li><a href="http://www.egison.org/~egi/etc/galois.html">Galois theory</a></li>
+</p>
+
+<p>
+  Mathematics I have learned includes elementary number theory, mathematical logic, computational complexity theory, general topology, Galois theory, linear algebra, vector analysis, tensor analysis, and Fourier analysis.
+</p>
+<p>
+  Currently, I am learning differential geometry, complex analysis, statistics, and numerical analysis.
+</p>
+
+<h3>Scheme Compiler (Past work)</h3>
+<p><u><a href="https://github.com/egisatoshi/scheme-compiler">https://github.com/egisatoshi/scheme-compiler</a></u><br>
   I have an experience writing a Scheme compiler.
   This compiler generates optimized machine language codes which I designed.
   This source contains the compiler, assembler, and simulator.
@@ -98,14 +167,30 @@ Masami Hagiya Lab.</p>
   The source code is available on <a href="https://github.com/egisatoshi/scheme-compiler">GitHub</a>.
 </p>
 
+<h3>Scheme Meta-Circular Interpreter (Past work)</h3>
+<p>
+  I have implemented a meta-circular interpreter of Scheme.
+  A meta-circular interpreter can execute itself on it, recursively.
+  I have implemented it in 10 days after touching Scheme and functional programming for the first time in my life.
+</p>
+
+<!--
 <h3>Gohantabeyo.com</h3>
 <p><u>http://gohantabeyo.com</u><br>
   I am the second administrator of <a href="http://gohantabeyo.com">gohantabeyo.com</a> website.
   We can find someone who want to have lunch with each other using this site.
   This site is a twitter application build using Ruby on Rails.
 </p>
+-->
 
-<h3>Tomotomotter</h3>
+<h3>Unix Shell (Past work)</h3>
+<p><u><a href="https://github.com/egisatoshi/egsh">https://github.com/egisatoshi/egsh</a></u><br>
+  I have an experience writing a simple shell which run on UNIX in C.
+  The source code is available on <a href="https://github.com/egisatoshi/egsh">GitHub</a>.
+  I have implemented this shell in 2 months after touching C for the first time in my life.
+</p>
+
+<h3>Tomotomotter (Past work)</h3>
 <p>
   Tomotomotter is a kinds of bottle mail application based on twitter.
   With this application, we can exchange letters with our friends of friends, without knowing who they are each other.
@@ -114,27 +199,42 @@ Masami Hagiya Lab.</p>
   This site is now closed.
 </p>
 
-<h3>egsh</h3>
-<p><u>https://github.com/egisatoshi/egsh</u><br>
-  I have an experience writing a simple shell which run on UNIX in C.
-  The source code is available on <a href="https://github.com/egisatoshi/egsh">GitHub</a>.
-</p>
-
+<!--
 <h3>Simple HTTP Server</h3>
 <p>
   I have an experience writing a simple HTTP server which run on UNIX in C.
 </p>
+-->
 
-<h2>Foreign Language Skills</h2>
-<p>English(TOEIC 895, listening 470, reading 425)</p>
+<h2>Honors / Achievements</h2>
+
+<p>
+  I have awarded several times for the development of Egison.
+</p>
+
+<h3>Japan OSS Encouragement Award, Japan OSS Promotion Forum, October 2015</h3>
+<p><u><a href="http://ossforum.jp/ossaward10th2">http://ossforum.jp/ossaward10th2</a></u><br>
+
+<h3>Software Japan Award, IPSJ, February 2015</h3>
+<p><u><a href="https://www.ipsj.or.jp/award/softwarejapan_award.html">https://www.ipsj.or.jp/award/softwarejapan_award.html</a></u><br>
+
+<h3>Selected the Exploratory IT Human Resources Project, IPA, December 2011</h3>
+<p><u><a href="http://www.ipa.go.jp/jinzai/mitou/2011/2011_1/gaiyou/h-2.html">http://www.ipa.go.jp/jinzai/mitou/2011/2011_1/gaiyou/h-2.html</a></u><br>
+
+<h3>Certified as a Super Creator, IPA, October 2012</h3>
+<p><u><a href="http://www.ipa.go.jp/files/000009163.pdf">http://www.ipa.go.jp/files/000009163.pdf</a></u><br>
+</p>
+
+<h2>Language Skills</h2>
+<p>English(TOEIC 910)</p>
 
 <h2>Computer Skills</h2>
-<p><strong>Languages:</strong> Egison, Haskell, Erlang, C, Scheme, Ruby, Emacs Lisp, OCaml<br>
+<p><strong>Languages:</strong> Egison, Haskell, Erlang, Scheme, Ruby, C, Emacs Lisp, OCaml<br>
 <strong>Platforms:</strong> Linux, FreeBSD, MacOSX</p>
 
 <h2>References</h2>
 <p>Prof. Masami Hagiya<br>
-Dept of Computer Science, University of Tokyo, Tokyo Japan</p>
+Dept of Computer Science, The University of Tokyo, Tokyo Japan</p>
 
 </body>
 </html>
