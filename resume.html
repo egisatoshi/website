@@ -16,7 +16,7 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
 <h1>Satoshi Egi</h1>
 <p>
   Email: egi@egison.org<br>
-  Website: http://www.egison.org/~egi/<br>
+  Website: https://www.egison.org/~egi/<br>
   GitHub: https://github.com/egisatoshi/<br></p>
 </div>
 
@@ -36,13 +36,13 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
   In that process, I got interest in the design and implementation of programming languages.<br/>
   Pursuit of direct representation of computer programs suited me very much.<br/>
   Then, I got an idea of the mechanism to strengthen the expressive power of pattern-matching expressions and implemented it in my new programming language Egison.<br/>
-  For detail on Egison, please see <a href="http://www.egison.org">the website</a> and <a href="http://www.egison.org/blog/RTC2015.html">my latest presentation</a>.
+  For detail on Egison, please see <a href="https://www.egison.org">the website</a> and <a href="https://www.egison.org/blog/RTC2015.html">my latest presentation</a>.
 </p>
 
 <p>
   Recently, I have interest in importing ideas of mathematics behind machine learning technology into programming languages.<br/>
   There are still several notations and modularization that are possible on papers but impossible on computer programs.<br/>
-  My research purpose is to fill these gaps and accelerate the research and development of machine learning technology and whole computer science.
+  My research purpose is to fill these gaps and accelerate research of science.
 </p>
 
 <h2>Interests</h2>
@@ -52,6 +52,25 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
 <h2>Work Experience</h2>
 
 <h3>Scientist, Rakuten Institute of Technology, November 2013 -</h3>
+<p><strong>Data mining</strong> - Worked for several data mining and text processing tasks.</p>
+<ul>
+  <li>Transliteration - Generated English-Katakana dictionaries from item's titles in Rakuten Ichiba.</li>
+  <ul>
+    <li>Implemented an Egison program to extract the pairs of an alphabet and katakana word whose pronunciation is similar.</li>
+    <li>List up shops in Rakuten who have a list of these pairs.</li>
+  </ul>
+  <li>Address normalization - Implemented an Egison program to normalize address to detect an address in the black list. (e.g. "四丁目12ー3" -&gt; "4-12-3", "四◯三" -&gt; "403")</li>
+  <li>
+    Counter suffix enumeration - Enumerate counter suffixes applying the regular expression "[0-9].(セット|入り|組)" to item's titles in Rakuten Ichiba.
+    (e.g. "壮" - お灸1000壮入り, "客" - 湯呑み5客セット, "幅" - 掛け軸3幅セット)
+  </li>
+</ul>
+<p><strong>Egison</strong> - Developing a language as a creator.</p>
+<ul>
+  <li>Improved the performance and enabled it to handle large files whose size is more than 2-3GB.</li>
+  <li>Made a good-looking website, an online-interpreter and online-tutorial.</li>
+  <li>Implementing symbolic algebra system programmable utilizing Egison pattern-matching.</li>
+</ul>
 <p><strong>LeoFS</strong> - Worked as a member of the project.</p>
 <ul>
   <li>Introduced <code>dialyzer</code>, a static type analyzing tool for Erlang to accelerate the implementation process and fixed several bugs.</li>
@@ -62,25 +81,6 @@ h3 {margin-bottom:1em; padding-bottom:.2em;}
   <li>Implemented a re-entrant SQL parser in C that can be called from Erlang as NIF functions.</li>
   <li>Read a part of source code of the existing data analysis software. (Pig, Hive, Spark)</li>
   <li>Surveyed the existing machine learning libraries and their mechanism. (TensorFlow, Chainer)</li>
-</ul>
-<p><strong>Data mining</strong> - Worked for several data mining and text processing tasks.</p>
-<ul>
-  <li>Transliteration - Generated English-Katakana dictionaries from item's titles in Rakuten Ichiba.</li>
-  <ul>
-    <li>Implemented an Egison program to extract the pairs of an alphabet and katakana word whose pronunciation is similar.</li>
-    <li>List up shops in Rakuten who have a list of these pairs.</li>
-  </ul>
-  <li>Address normalization - Implemented an Egison program to normalize address to detect an address in the black list. (e.g. "四丁目12ー3" -> "4-12-3", "四◯三" -> "403")</li>
-  <li>
-    Counter suffix enumeration - Enumerate counter suffixes applying the regular expression "[0-9].(セット|入り|組)" to item's titles in Rakuten Ichiba.
-    (e.g. "壮" - お灸1000壮入り, "客" - 湯呑み5客セット, "幅" - 掛け軸3幅セット)
-  </li>
-</ul>
-<p><strong>Egison</strong> - Developing a language as a creator.</p>
-<ul>
-  <li>Improved the performance and enabled it to handle large files whose size is more than 2-3GB.</li>
-  <li>Made a good-looking website and an online-interpreter and online-tutorial.</li>
-  <li>(Planning to) Implement symbolic algebra system programmable utilizing Egison pattern-matching.</li>
 </ul>
 
 <h3>Engineer, Murakumo Corp, October 2012 - June 2013</h3>
@@ -105,7 +105,7 @@ Masami Hagiya Lab.</p>
 <h2>Activities</h2>
 
 <h3>The Egison Programming Language (Ongoing)</h3>
-<p><u><a href="http://www.egison.org">http://www.egison.org</a></u><br></p>
+<p><u><a href="https://www.egison.org">https://www.egison.org</a></u><br></p>
 
 <p>
   I have designed and implemented programming language Egison.
@@ -133,7 +133,7 @@ Masami Hagiya Lab.</p>
 </p>
 
 <p>
-  My latest presentation on Egison at Rakuten Technology Conference 2015 is <a href="http://www.egison.org/blog/RTC2015.html">here</a>.
+  My latest presentation on Egison at Rakuten Technology Conference 2015 is <a href="https://www.egison.org/blog/RTC2015.html">here</a>.
 </p>
 
 <h3>Math Notebook (Ongoing)</h3>
@@ -144,33 +144,30 @@ Masami Hagiya Lab.</p>
 </p>
 
 <p>
-  <li><a href="http://www.egison.org/~egi/etc/godel.html">Gödel's incompleteness theorems</a></li>
-  <li><a href="http://www.egison.org/~egi/etc/galois.html">Galois theory</a></li>
+  <li><a href="https://www.egison.org/~egi/etc/godel.html">Gödel's incompleteness theorems</a></li>
+  <li><a href="https://www.egison.org/~egi/etc/galois.html">Galois theory</a></li>
 </p>
 
 <p>
-  Mathematics I have learned includes elementary number theory, mathematical logic, computational complexity theory, general topology, Galois theory, linear algebra, vector analysis, tensor analysis, and Fourier analysis.
-</p>
-<p>
-  Currently, I am learning differential geometry, complex analysis, statistics, and numerical analysis.
+  Mathematics I have learned includes elementary number theory, mathematical logic, computational complexity theory, general topology, Galois theory, linear algebra, vector analysis, tensor analysis, Fourier analysis, differential geometry, complex analysis, statistics, and numerical analysis.
 </p>
 
 <h3>Scheme Compiler (Past work)</h3>
 <p><u><a href="https://github.com/egisatoshi/scheme-compiler">https://github.com/egisatoshi/scheme-compiler</a></u><br>
   I have an experience writing a Scheme compiler.
-  This compiler generates optimized machine language codes which I designed.
+  This compiler generates optimized machine language code which I designed.
   This source contains the compiler, assembler, and simulator.
   The assembler generates a byte code from a file generated by the compiler.
   A byte code generated by the assembler can be executed by the simulator.
-  I wrote the compiler and assembler with Scheme.
-  Simulator is written in C for speed.
+  I wrote the compiler and assembler in Scheme.
+  Simulator is written in C.
   The source code is available on <a href="https://github.com/egisatoshi/scheme-compiler">GitHub</a>.
 </p>
 
 <h3>Scheme Meta-Circular Interpreter (Past work)</h3>
 <p>
   I have implemented a meta-circular interpreter of Scheme.
-  A meta-circular interpreter can execute itself on it, recursively.
+  A meta-circular interpreter can recuresively execute itself.
   I have implemented it in 10 days after touching Scheme and functional programming for the first time in my life.
 </p>
 
@@ -185,7 +182,7 @@ Masami Hagiya Lab.</p>
 
 <h3>Unix Shell (Past work)</h3>
 <p><u><a href="https://github.com/egisatoshi/egsh">https://github.com/egisatoshi/egsh</a></u><br>
-  I have an experience writing a simple shell which run on UNIX in C.
+  I have an experience writing a simple shell that run on UNIX in C.
   The source code is available on <a href="https://github.com/egisatoshi/egsh">GitHub</a>.
   I have implemented this shell in 2 months after touching C for the first time in my life.
 </p>
@@ -226,7 +223,7 @@ Masami Hagiya Lab.</p>
 </p>
 
 <h2>Language Skills</h2>
-<p>English(TOEIC 910)</p>
+<p>Japanese (Native), English (TOEIC 910)</p>
 
 <h2>Computer Skills</h2>
 <p><strong>Languages:</strong> Egison, Haskell, Erlang, Scheme, Ruby, C, Emacs Lisp, OCaml<br>
